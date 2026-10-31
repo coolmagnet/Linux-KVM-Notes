@@ -1,6 +1,29 @@
 # Linux-KVM-Notes
 
 <pre>
+Save a VM:
+
+The "Save" option in the Virt-Manager GUI corresponds exactly to virsh managedsave.
+
+When you use this option, libvirt pauses the VM, dumps its running RAM to a system-managed file, and shuts the VM down. 
+When you start it up again, it resumes instantly exactly where you left it.
+
+Run this command to save your VM:
+
+virsh -c qemu:///system managedsave debian13
+
+	
+How to Restore It Later:
+To restore the VM from that exact saved state, simply start it normally:
+
+virsh -c qemu:///system start debian13
+
+Libvirt will automatically detect the managed save file, reload the RAM state, and resume the 
+VM without performing a cold boot.
+
+</pre>
+
+<pre>
 How to share directories between host and guests on kvm
 
 The most efficient and modern way to share directories between a KVM host and a guest is
