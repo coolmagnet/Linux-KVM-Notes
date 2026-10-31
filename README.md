@@ -10,6 +10,8 @@ and shuts the VM down. When you start it up again, it resumes instantly exactly 
 
 Run this command to save your VM:
 
+virsh -c qemu:///system list --all
+
 virsh -c qemu:///system managedsave debian13
 
 	
