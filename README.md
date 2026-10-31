@@ -5,8 +5,8 @@ Save a VM:
 
 The "Save" option in the Virt-Manager GUI corresponds exactly to virsh managedsave.
 
-When you use this option, libvirt pauses the VM, dumps its running RAM to a system-managed file, and shuts the VM down. 
-When you start it up again, it resumes instantly exactly where you left it.
+When you use this option, libvirt pauses the VM, dumps its running RAM to a system-managed file, 
+and shuts the VM down. When you start it up again, it resumes instantly exactly where you left it.
 
 Run this command to save your VM:
 
